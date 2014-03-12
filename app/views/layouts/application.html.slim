@@ -13,25 +13,12 @@ html
         button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
           span class="sr-only" Toggle navigation
       a class="navbar-brand" href="#" League of Legends
-    header role="banner"
-      h1 Champion ratings
-    main role="main" class="container"
-      div class="row"
-        div class="col-md-4 col-md-offset-4"
-          form role="form"
-            div class="form-group"
-              label for="exampleInputEmail1" Email address
-              input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
-            div class="form-group"
-              label for="exampleInputPassword1" Password
-              input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
-            div class="checkbox"
-              input type="checkbox" Remember Me
-            button type="submit" class="btn btn-default" Submit
+    == yield
   footer
     nav class="navbar navbar-default navbar-fixed-bottom" role="navigation"
       div class="container"
-        p
-          a href="/privacy" Privacy Policy &bull;
-          a href="/terms" Terms of Use &bull;
+        p.text-muted.credit
+          = link_to "privacy policy", privacy_url
+          | &bull;
+          / ="/terms" Terms of Use &bull;
           | &copy; 2014 Champion Ratings
