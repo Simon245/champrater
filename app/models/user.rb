@@ -18,7 +18,7 @@ class User
   end
 
   def authenticate(password)
-    self.fish == BCrypt::Engine.hash_secret(password, self,salt)
+    self.fish == BCrypt::Engine.hash_secret(password, self.salt)
   end
 
   protected

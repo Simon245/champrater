@@ -7,8 +7,15 @@ class SessionController <ApplicationController
   def create
     # render json: params
     # render text: "log #{params[:user][:email]} in with #{params[:user][:password]}."
-    # render text: "Log in the user in."
-    render text: User.authenticate(params[:user][:email], params[:user][:password])
+    @user = User.authenticate(params[:user][:email], params[:user][:password])
+
+    if @user
+      session[:user_id] = @user.id
+      render text: "you're logged in asshat #{@user.email}"
+    else
+      render text: "The fuck do you want?"
+    end
+
   end
 
   def destroy
