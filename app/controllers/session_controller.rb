@@ -1,7 +1,9 @@
 class SessionController <ApplicationController
 
+   # skip_before_action :verify_authenticity_token
+
   def new
-    render text: "Display the log in the form."
+    # render text: "Display the log in the form."
   end
 
   def create
@@ -11,7 +13,8 @@ class SessionController <ApplicationController
 
     if @user
       session[:user_id] = @user.id
-      render text: "you're logged in asshat #{@user.email}"
+      # render text: "you're logged in asshat #{@user.email}"
+      redirect_to root_url
     else
       render text: "The fuck do you want?"
     end
@@ -19,6 +22,7 @@ class SessionController <ApplicationController
   end
 
   def destroy
+    session[:user_id] = nil
     render text: "Log the user out."
   end
 
