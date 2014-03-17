@@ -10,9 +10,12 @@ html
     nav class="navbar navbar-default" role="navigation"
       div class="container-fluid"
       div class="navbar-header"
+      .pull-right
+        = link_to "Log Out", logout_url, method: :delete, class: "btn btn-danger logout-link" if current_user
         button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
           span class="sr-only" Toggle navigation
       a class="navbar-brand" href="#" League of Legends
+
     == yield
   footer
     nav class="navbar navbar-default navbar-fixed-bottom" role="navigation"

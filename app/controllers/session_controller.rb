@@ -5,16 +5,20 @@ class SessionController <ApplicationController
   def new
     @messages = flash.map {|key, value| "#{key.capitalize}: #{value}"}.join(";")
     # render text: "Display the log in the form."
+    redirect_to root_url, notice: "You are logged in." if current_user
   end
 
   def create
-    # render json: params
-    # render text: "log #{params[:user][:email]} in with #{params[:user][:password]}."
-    @user = User.authenticate(params[:user][:email], params[:user][:password])
+    # @user = User.authenticate(params[:user][:email], params[:user][:password])
+    user = User.find_by(email:params[:user][:email])
+    password = params[:user][:password]
 
-    if @user
+    if password.blank?
+      user.set_password_reset if user
+      flash.now[:notice] = "We'll send you and email"
+      render :new
+    elsif user and user.authenticate(password)
       session[:user_id] = @user.id
-      # render text: "you're logged in asshat #{@user.email}"
       redirect_to root_url
     else
       flash.now[:alert] = "Unable to log you in. Please check your email and password and try again"
