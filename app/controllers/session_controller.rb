@@ -22,7 +22,7 @@ class SessionController < ApplicationController
       render :new
     elsif user and user.authenticate(password)
       session[:user_id] = user.id
-      redirect_to root_url
+      redirect_to characters_url
     else
       flash.now[:alert] = "Unable to log you in. Please check your email and password and try again."
       render :new
