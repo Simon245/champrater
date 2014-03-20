@@ -4,6 +4,7 @@ class CharactersController < ApplicationController
 
   def home
     @message = "hello"
+    @character = User.all.entries.sample
   end
 
   def top
