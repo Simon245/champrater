@@ -6,10 +6,12 @@ p
   header
     h1 Who is your favourite champion?
 
-  section id= "main"
+  section id="main"
+    div class="row"
+      div class="sidebar"
     .col-md-5
       div
-        img class="banner" src="https://dl.dropboxusercontent.com/u/77249216/Caitlyn_0.jpg" height="560" width= "308"
+        = image_tag "champions/Ziggs_0.jpg", height:"560", width: "308"
         div class="nextprevious"
           button type="button" class="btn btn-default" Previous
           button type="button" class="btn btn-default" Next

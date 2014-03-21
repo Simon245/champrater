@@ -7,7 +7,7 @@ html
     = javascript_include_tag "application"
     = csrf_meta_tags
   body
-    nav class="navbar navbar-default" role="navigation"
+    nav class="navbar navbar-inverse" role="navigation"
       div class="container-fluid"
       div class="navbar-header"
       .pull-right
@@ -15,6 +15,7 @@ html
         / button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
         /   span class="sr-only" Toggle navigation
       a class="navbar-brand" href="#" League of Legends
+    div class="sidebar-nav"
 
     == yield
   footer
