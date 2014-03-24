@@ -6,22 +6,22 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.destroy_all
+# User.destroy_all
 
 User.create([
     {email: "simonball245@gmail.com"},
     {email: "simon245@gmail.com"}
     ])
 
-Characters.destroy_all
+Character.destroy_all
 
-Character.create(:name = "Blitzcrank", :image ="Blitzcrank_0.jpg", :votes="0", score:="0")
-Character.create(:name = "Caitlyn", :image ="Caitlyn_0.jpg", :votes="0", score:="0")
-Character.create(:name = "Fiddlesticks", :image ="Fiddlesticks_0.jpg", :votes="0", score:="0")
-Character.create(:name = "Jinx", :image ="Jinx_0.jpg", :votes="0", score:="0")
-Character.create(:name = "Miss Fortune", :image ="Miss Fortune_0.jpg", :votes="0", score:="0")
-Character.create(:name = "Olaf", :image ="Olaf_0.jpg", :votes="0", score:="0")
-Character.create(:name = "Singed", :image ="Singed_0.jpg", :votes="0", score:="0")
-Character.create(:name = "Tryndamere", :image ="Tryndamere_0.jpg", :votes="0", score:="0")
-Character.create(:name = "Vi", :image ="Vi_0.jpg", :votes="0", score:="0")
-Character.create(:name = "Ziggs", :image ="Ziggs_0.jpg", :votes="0", score:="0")
+Character.create({name: "Blitzcrank", image: "Blitzcrank_0.jpg", votes: 0 , score: 0})
+Character.create({name: "Caitlyn", image: "Caitlyn_0.jpg", votes: 0, score: 0})
+Character.create({name: "Fiddlesticks", image: "Fiddlesticks_0.jpg", votes: 0, score: 0})
+Character.create({name: "Jinx", image: "Jinx_0.jpg", votes: 0, score: 0})
+Character.create({name: "Miss Fortune", image: "Miss Fortune_0.jpg", votes: 0, score: 0})
+Character.create({name: "Olaf", image: "Olaf_0.jpg", votes: 0, score: 0})
+Character.create({name: "Singed", image: "Singed_0.jpg", votes: 0, score: 0})
+Character.create({name: "Tryndamere", image: "Tryndamere_0.jpg", votes: 0, score: 0})
+Character.create({name: "Vi", image: "Vi_0.jpg", votes: 0, score: 0})
+Character.create({name: "Ziggs", image: "Ziggs_0.jpg", votes: 0, score: 0})
