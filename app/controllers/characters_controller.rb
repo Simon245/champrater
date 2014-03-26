@@ -4,7 +4,7 @@ class CharactersController < ApplicationController
 
   def home
     @message = "hello"
-    @character = User.all.entries.sample
+    @character = Character.all.entries.sample
   end
 
   def top
@@ -12,9 +12,7 @@ class CharactersController < ApplicationController
   end
 
   def show
-    @images = ["Blitzcrank_0.jpg", "Caitlyn_0.jpg",  "Fiddlesticks_0.jpg",]
-    @random_no = rand(3)
-    @random_image = @images[@random_no]
+
   end
 
 end

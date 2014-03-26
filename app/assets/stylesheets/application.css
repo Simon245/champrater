@@ -12,7 +12,15 @@
  *= require_tree .
  */
 
- body {
+.navigation{
+
+}
+
+.btn{
+  margin: 10px;
+}
+
+body {
   font-family: Verdana, Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -32,6 +40,16 @@ h1 {
   margin: 20px 0 0;
   padding: 0;
   text-align: center;
+}
+
+h2 {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  font-weight: normal;
+  line-height: 2em;
+  margin: 20px 0 0;
+  padding: 0;
+ /* text-align: center;*/
 }
 
 div.row {
