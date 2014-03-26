@@ -5,9 +5,12 @@ class CharactersController < ApplicationController
   def home
     @message = "hello"
     @character = Character.all.entries.sample
+
+
   end
 
-  def top
+  def vote
+    @user = User.new
 
   end
 

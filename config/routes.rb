@@ -15,5 +15,6 @@ Champrater::Application.routes.draw do
   patch 'reset/:code' => 'password#update'
 
   get 'characters' => 'characters#home', as: :characters
+  post 'characters' => 'characters#rating'
 
 end

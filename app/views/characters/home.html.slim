@@ -18,7 +18,36 @@ div class="row"
 div class="row"
   .col-md-5
     div class="button"
-      button type="previous" class="btn btn-large" Previous
-  .col-md-3
+      button type="click" class="btn btn-large" Previous
+  .col-md-2
+    = form_for @character, url: characters_url, method: :post, html: { id: "voteform"} do |f|
+      fieldset
+        .form-group
+          = radio_button_tag :rate, "1"
+          = label_tag "1"
+        .form-group
+          = radio_button_tag :rate, "2"
+          = label_tag "2"
+        .form-group
+          = radio_button_tag :rate, "3"
+          = label_tag "3"
+        .form-group
+          = radio_button_tag :rate, "4"
+          = label_tag "4"
+        .form-group
+          = radio_button_tag :rate, "5"
+          = label_tag "5"
+
+        .form-group
+          = f.submit "Rate", class: "btn btn-success"
+
+  .col-md-1
     div class="button"
-      button type="next" class="btn btn-large" Next
+      button type="click" class="btn btn-large" Next
+
+div class="row"
+  .col-md-5
+    div class="score"
+      h3
+        = @character.score
+
