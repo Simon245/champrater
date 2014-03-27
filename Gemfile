@@ -14,4 +14,18 @@ group :development, :test do
   # gem "better_errors"
   gem "binding_of_caller"
   gem 'letter_opener'
+  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+  gem 'guard-rspec'
+  gem 'guard-livereload'
+
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
+
+group :tests do
+  gem 'faker'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'selenium-webdriver'
 end
