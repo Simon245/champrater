@@ -47,7 +47,7 @@ div class="row"
         input name="rate_form" type="hidden" value="#{@character._id}"
 
         .form-group
-          = f.submit "rate", class: "btn btn-success"
+          = f.submit "Rate", class: "btn btn-success"
 
   .col-md-1
     div class="button"
@@ -57,5 +57,5 @@ div class="row"
   .col-md-5
     div class="score"
       h3
-        = @character.score
+        = rating_calc
 
