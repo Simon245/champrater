@@ -9,7 +9,8 @@ class CharactersController < ApplicationController
   end
 
   def rating
-    @character
+    @character = Character.find_by _id: params[:rate_form]
+    @character.update_count params[:rate]
   end
 
   def vote

@@ -15,7 +15,7 @@ class Character
 
   def update_count votes
     self.votes += 1
-    self.score += votes
+    self.score += votes.to_i
     self.save
   end
 
