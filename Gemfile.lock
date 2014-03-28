@@ -222,6 +222,7 @@ DEPENDENCIES
   launchy
   letter_opener
   mongoid!
+  pry
   rails (= 4.0.3)
   rspec-rails
   selenium-webdriver

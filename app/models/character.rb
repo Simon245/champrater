@@ -19,11 +19,11 @@ class Character
     self.save
   end
 
-  def self.search search
+  def self.search(search)
     if search
-      find(:all, :conditions => ["name"])
+      Character.where(name: /#{search}.*/i).first
     else
-      find(:all)
+      Character.all.entries
     end
   end
 

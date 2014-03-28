@@ -16,5 +16,6 @@ Champrater::Application.routes.draw do
 
   get 'characters' => 'characters#home', as: :characters
   post 'characters' => 'characters#rating'
+  patch 'characters' => 'characters#search' #, as: :charsearch
 
 end

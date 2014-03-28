@@ -5,7 +5,6 @@ class CharactersController < ApplicationController
   def home
     @message = "hello"
     @character = Character.all.entries.sample
-
   end
 
   def rating
@@ -19,12 +18,13 @@ class CharactersController < ApplicationController
 
   end
 
-  def show
-
+  def search
+    @character = Character.search params[:search]
+    render :home
   end
 
-  def search
-    @character = Character.search(params[:search])
+  def show
+
   end
 
 end
