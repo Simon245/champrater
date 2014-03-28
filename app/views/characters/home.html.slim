@@ -30,24 +30,26 @@ div class="row"
   .col-md-2
     = form_for @character, url: characters_url, method: :post, html: { id: "rate_form" } do |f|
       fieldset
-        ul id="rate_list"
-          li
+        table class="table"
+          thead
+            tr
+          th
             .form-group
               = radio_button_tag :rate, "1"
               = label_tag "1"
-          li
+          th
             .form-group
               = radio_button_tag :rate, "2"
               = label_tag "2"
-          li
+          th
             .form-group
               = radio_button_tag :rate, "3"
               = label_tag "3"
-          li
+          th
             .form-group
               = radio_button_tag :rate, "4"
               = label_tag "4"
-          li
+          th
             .form-group
               = radio_button_tag :rate, "5"
               = label_tag "5"
@@ -66,8 +68,3 @@ div class="row"
     div class="score"
       h3
         = rating_calc
-
-
-
-/ input name="champ_search" type="search" placeholder="Search"
-      /   button type="click" class="btn btn-large" Search
