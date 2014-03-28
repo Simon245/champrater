@@ -19,6 +19,14 @@ class Character
     self.save
   end
 
+  def self.search search
+    if search
+      find(:all, :conditions => ["name"])
+    else
+      find(:all)
+    end
+  end
+
 
 
 

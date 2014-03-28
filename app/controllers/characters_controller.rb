@@ -23,4 +23,8 @@ class CharactersController < ApplicationController
 
   end
 
+  def search
+    @character = Character.search(params[:search])
+  end
+
 end
