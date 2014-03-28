@@ -9,7 +9,7 @@ class CharactersController < ApplicationController
   end
 
   def rating
-
+    @character
   end
 
   def vote

@@ -13,4 +13,13 @@ class Character
   field :score, type: Integer
 
 
+  def update_count votes
+    self.votes += 1
+    self.score += votes
+    self.save
+  end
+
+
+
+
 end

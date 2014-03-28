@@ -13,7 +13,7 @@
  */
 
 .navigation{
-
+  padding: 1px
 }
 
 .btn{
@@ -68,3 +68,13 @@ div.button {
   .previous {
     text-align: left;
   }
+
+#ratelist li {
+  display: inline;
+  list-style-type: none;
+  /*padding-right: 10px;*/
+}
+
+footer {
+  padding:1px
+}

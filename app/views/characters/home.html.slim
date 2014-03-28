@@ -20,26 +20,34 @@ div class="row"
     div class="button"
       button type="click" class="btn btn-large" Previous
   .col-md-2
-    = form_for @character, url: characters_url, method: :post, html: { id: "voteform"} do |f|
+    = form_for @character, url: characters_url, method: :post, html: { id: "rate_form" } do |f|
       fieldset
-        .form-group
-          = radio_button_tag :rate, "1"
-          = label_tag "1"
-        .form-group
-          = radio_button_tag :rate, "2"
-          = label_tag "2"
-        .form-group
-          = radio_button_tag :rate, "3"
-          = label_tag "3"
-        .form-group
-          = radio_button_tag :rate, "4"
-          = label_tag "4"
-        .form-group
-          = radio_button_tag :rate, "5"
-          = label_tag "5"
+        ul id="rate_list"
+          li
+            .form-group
+              = radio_button_tag :rate, "1"
+              = label_tag "1"
+          li
+            .form-group
+              = radio_button_tag :rate, "2"
+              = label_tag "2"
+          li
+            .form-group
+              = radio_button_tag :rate, "3"
+              = label_tag "3"
+          li
+            .form-group
+              = radio_button_tag :rate, "4"
+              = label_tag "4"
+          li
+            .form-group
+              = radio_button_tag :rate, "5"
+              = label_tag "5"
+
+        input name="rate_form" type="hidden" value="#{@character._id}"
 
         .form-group
-          = f.submit "Rate", class: "btn btn-success"
+          = f.submit "rate", class: "btn btn-success"
 
   .col-md-1
     div class="button"
