@@ -1,9 +1,9 @@
 .row
   .col-md-4.col-md-offset-4
     p
-      | Welcome to the characters rating home page
+      / | Welcome to the characters rating home page
 
-      =< @message
+      / =< @message
       header
         h1 Who is your favourite champion?
 
@@ -17,54 +17,43 @@ div class="row"
 
 div class="row"
   .col-md-4.col-md-offset-5
-    div class="champic"
-        h2
-          = @character.name
-        img src="/champions/#{@character.image}"
+    h2
+      | #{@character.name} (#{rating_calc})
+div class="row"
+  .col-md-4.col-md-offset-5
+    img src="/champions/#{@character.image}"
+
 
 
 div class="row"
-  .col-md-5
-    div class="button"
-      button type="click" class="btn btn-large" Previous
-  .col-md-2
+  / .col-md-5
+  /   div class="button"
+  /     button type="click" class="btn btn-large" Previous
+  .col-lg-12
     = form_for @character, url: characters_url, method: :post, html: { id: "rate_form" } do |f|
-      fieldset
-        table class="table"
-          thead
-            tr
-          th
-            .form-group
-              = radio_button_tag :rate, "1"
-              = label_tag "1"
-          th
-            .form-group
-              = radio_button_tag :rate, "2"
-              = label_tag "2"
-          th
-            .form-group
-              = radio_button_tag :rate, "3"
-              = label_tag "3"
-          th
-            .form-group
-              = radio_button_tag :rate, "4"
-              = label_tag "4"
-          th
-            .form-group
-              = radio_button_tag :rate, "5"
-              = label_tag "5"
+      div class="col-lg-5"
+      div class="input-group"
+        span class="input-group-addon"
+          = radio_button_tag :rate, "1"
+          = label_tag "1"
+
+          = radio_button_tag :rate, "2"
+          = label_tag "2"
+
+          = radio_button_tag :rate, "3"
+          = label_tag "3"
+
+          = radio_button_tag :rate, "4"
+          = label_tag "4"
+
+          = radio_button_tag :rate, "5"
+          = label_tag "5"
 
         input name="rate_form" type="hidden" value="#{@character._id}"
 
-        .form-group
           = f.submit "Rate", class: "btn btn-success"
 
-  .col-md-1
-    div class="button"
-      button type="click" class="btn btn-large" Next
+  / .col-md-1
+  /   div class="button"
+  /     button type="click" class="btn btn-large" Next
 
-div class="row"
-  .col-md-5
-    div class="score"
-      h3
-        = rating_calc
