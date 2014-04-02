@@ -2,14 +2,14 @@ class CharactersController < ApplicationController
 
   # before_action :is_authenticated?
 
-  def home
+  def index
     @message = "hello"
     @character = Character.all.entries.sample
   end
 
   def rating
-    @character = Character.find_by _id: params[:rate_form]
-    @character.update_count params[:rate]
+    @character = Character.find_by _id: params[:character_id]
+    @character.update_count params[:rating]
     redirect_to(:back)
   end
 
@@ -20,7 +20,7 @@ class CharactersController < ApplicationController
 
   def search
     @character = Character.search params[:search]
-    render :home
+    render :index
   end
 
   def show

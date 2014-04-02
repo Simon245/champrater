@@ -10,12 +10,12 @@ class Character
   field :name, type: String
   field :image, type: String
   field :votes, type: Integer
-  field :score, type: Integer
+  field :total_score, type: Integer
 
 
   def update_count votes
     self.votes += 1
-    self.score += votes.to_i
+    self.total_score += votes.to_i
     self.save
   end
 
