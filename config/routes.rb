@@ -1,5 +1,7 @@
 Champrater::Application.routes.draw do
 
+  # resources :characters
+
   root 'site#index'
 
 #Session
@@ -7,10 +9,6 @@ Champrater::Application.routes.draw do
   post    'login' => 'session#create'
   delete  'logout' => 'session#destroy'
   get     'logout' => 'session#destroy'
-
-#Site
-  get 'privacy' => 'site#privacy'
-  get 'terms' => 'site#terms'
 
 #Password
   get 'reset/:code' => 'password#edit', as: :reset
@@ -21,5 +19,9 @@ Champrater::Application.routes.draw do
   get 'characters' => 'characters#index', as: :characters
   post 'characters' => 'characters#rating'
   patch 'characters' => 'characters#search' #, as: :charsearch
+
+#Site
+  get 'privacy' => 'site#privacy'
+  get 'terms' => 'site#terms'
 
 end

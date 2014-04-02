@@ -9,7 +9,7 @@ class CharactersController < ApplicationController
 
   def rating
     @character = Character.find_by _id: params[:rate_form]
-    @character.update_count params[:rate]
+    @character.update_count params[:rating]
     redirect_to(:back)
   end
 

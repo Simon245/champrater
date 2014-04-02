@@ -1,5 +1,3 @@
-
-
 class Character
 
   include Mongoid::Document
