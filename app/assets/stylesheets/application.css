@@ -12,9 +12,9 @@
  *= require_tree .
  */
 
-.navbar-fixed-top{
+/*.navbar-fixed-top{
   padding: px
-}
+}*/
 
 .btn{
   margin: 10px;
@@ -52,16 +52,6 @@ h2 {
  /* text-align: center;*/
 }
 
-h3 {
-  font-family: Verdana, Helvetica, Arial, sans-serif;
-  font-size: 1.8em;
-  font-weight: normal;
-  line-height: 1em;
-  margin: 0 0 0;
-  padding: 10px;
-  /*text-align: right;*/
-}
-
 /*div.row {
   margin-left: auto;
   margin-right: auto;
@@ -88,9 +78,6 @@ div.button {
   letter-spacing: 20px
 }
 
-  #rate_3 {
-    padding: 10px
-  }
  /* .previous {
     text-align: left;
   }*/
@@ -105,9 +92,9 @@ div.button {
   /*padding-right: 10px;*/
 }*/
 
-.navbar {
+/*.navbar {
  position: absolute;
-}
+}*/
 
 /*.navbar-brand {
   vertical-align: right
@@ -119,7 +106,7 @@ div.button {
 }*/
 
 main {
-  min-height: 650px;
+  min-height: 750px;
 }
 
 /*footer {
