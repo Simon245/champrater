@@ -26,8 +26,4 @@ class Character
       Character.all.entries
     end
   end
-
-
-
-
 end

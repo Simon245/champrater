@@ -11,11 +11,6 @@
  *= require_self
  *= require_tree .
  */
-
-/*.navbar-fixed-top{
-  padding: px
-}*/
-
 .btn{
   margin: 10px;
 }
@@ -52,13 +47,6 @@ h2 {
  /* text-align: center;*/
 }
 
-/*div.row {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-}*/
-
-
 div.button {
   margin-left: auto;
   margin-right: auto;
@@ -78,40 +66,7 @@ div.button {
   letter-spacing: 20px
 }
 
- /* .previous {
-    text-align: left;
-  }*/
-
-/*.total_score {
-  margin-bottom: 50px
-}*/
-
-/*#ratelist li {
-  display: inline;
-  list-style-type: none;
-  /*padding-right: 10px;
-}*/
-
-/*.navbar {
- position: absolute;
-}*/
-
-/*.navbar-brand {
-  vertical-align: right
-}*/
-
-
-/*.navbar-fixed-bottom{
-  padding: -50px
-}*/
-
 main {
   min-height: 750px;
 }
 
-/*footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-}*/
