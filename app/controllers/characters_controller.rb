@@ -2,7 +2,7 @@ class CharactersController < ApplicationController
 
   # before_action :is_authenticated?
 
-  def home
+  def index
     @message = "hello"
     @character = Character.all.entries.sample
   end
@@ -20,7 +20,7 @@ class CharactersController < ApplicationController
 
   def search
     @character = Character.search params[:search]
-    render :home
+    render :index
   end
 
   def show
