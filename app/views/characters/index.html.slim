@@ -17,14 +17,14 @@ div class="row"
 div class="row"
   .col-md-4.col-md-offset-5
     h2
-      | #{@character.name} (#{rating_calc})
+      | #{@character.name} (#{average_score})
 div class="row"
   .col-md-4.col-md-offset-5
     img src="/champions/#{@character.image}"
 
 div class="row"
   .col-lg-12
-    = form_for @character, url: characters_url, method: :post, html: { id: "rate_form" } do |f|
+    = form_for @character, url: characters_url, method: :post, html: { id: "character_id" } do |f|
       div class="col-lg-5"
       div class="input-group"
         span class="input-group-addon"
@@ -43,6 +43,10 @@ div class="row"
           = radio_button_tag :rating, "5"
           = label_tag "5"
 
+<<<<<<< HEAD:app/views/characters/index.html.slim
         input name="rate_form" type="hidden" value="#{@character._id}"
+=======
+        input name="character_id" type="hidden" value="#{@character._id}"
+>>>>>>> refactor:app/views/characters/index.html.slim
 
           = f.submit "Rate", class: "btn btn-success"

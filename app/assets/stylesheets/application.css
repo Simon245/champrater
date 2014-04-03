@@ -11,20 +11,15 @@
  *= require_self
  *= require_tree .
  */
-
-/*.navbar-fixed-top{
-  padding: px
-}*/
-
-.btn{
+/*.btn{
   margin: 10px;
-}
+}*/
 
 body {
   font-family: Verdana, Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  line-height: 1;
+  line-height: 2;
   cursor: default;
   margin: 0;
   padding: 0;
@@ -52,13 +47,6 @@ h2 {
  /* text-align: center;*/
 }
 
-/*div.row {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-}*/
-
-
 div.button {
   margin-left: auto;
   margin-right: auto;
@@ -78,40 +66,45 @@ div.button {
   letter-spacing: 20px
 }
 
- /* .previous {
-    text-align: left;
-  }*/
-
-/*.score {
-  margin-bottom: 50px
-}*/
-
-/*#ratelist li {
-  display: inline;
-  list-style-type: none;
-  /*padding-right: 10px;*/
-}*/
-
-/*.navbar {
- position: absolute;
-}*/
-
-/*.navbar-brand {
-  vertical-align: right
-}*/
-
-
-/*.navbar-fixed-bottom{
-  padding: -50px
-}*/
-
 main {
   min-height: 750px;
 }
 
-/*footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-}*/
+legend {
+  display: block;
+  width: 58%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 26px;
+  line-height: inherit;
+  color: #333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 22px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input, button, select, textarea {
+font-family: inherit;
+font-size: 20px;
+line-height: inherit;
+}

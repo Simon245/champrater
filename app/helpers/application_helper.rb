@@ -1,7 +1,7 @@
 module ApplicationHelper
 
-  def rating_calc
-    return @character.score / @character.votes
+  def average_score
+    return @character.total_score / @character.votes
   end
 
 end
