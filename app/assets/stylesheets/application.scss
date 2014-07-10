@@ -47,6 +47,12 @@ h2 {
  /* text-align: center;*/
 }
 
+
+#sign-in{
+  float: none;
+}
+
+
 div.button {
   margin-left: auto;
   margin-right: auto;
@@ -66,9 +72,9 @@ div.button {
   letter-spacing: 20px
 }
 
-main {
-  min-height: 750px;
-}
+// main {
+//   min-height: 750px;
+// }
 
 legend {
   display: block;
@@ -108,3 +114,5 @@ font-family: inherit;
 font-size: 20px;
 line-height: inherit;
 }
+
+// footer

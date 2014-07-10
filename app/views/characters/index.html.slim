@@ -1,48 +1,55 @@
-div class="col-md-12"
-    p
-      / | Welcome to the characters rating home page
+.container
+  .row
+    .col-md-4
+    .col-md-4
+      p
+        / | Welcome to the characters rating home page
+        / =< @message
+        header
+          h1 Who is your favourite champion?
 
-      / =< @message
-      header
-        h1 Who is your favourite champion?
+      .search
+        = form_tag characters_path, method: :patch do
+          = text_field_tag :search, params[:search], class: "form-control", placeholder: "Champion Name"
+          = submit_tag "Search", class: "btn btn-success", :name => nil
+        end
 
-div class="row"
-  .col-md-4.col-md-offset-5
-    div class="search"
-      = form_tag characters_path, method: :patch do
-        = text_field_tag :search, params[:search], placeholder: "Champion Name"
-        = submit_tag "Search", :name => nil
-      end
+.container
+  .row
+    .col-md-4
+    .col-md-4
+      h2
+        | #{@character.name} (#{average_score})
 
-div class="row"
-  .col-md-4.col-md-offset-5
-    h2
-      | #{@character.name} (#{average_score})
-div class="row"
-  .col-md-4.col-md-offset-5
-    img src="/champions/#{@character.image}"
+.container
+  .row
+    .col-md-4
+    .col-md-4
+      img src="/champions/#{@character.image}"
 
-div class="row"
-  .col-lg-12
-    = form_for @character, url: characters_url, method: :post, html: { id: "character_id" } do |f|
-      div class="col-lg-5"
-      div class="input-group"
-        span class="input-group-addon"
-          = radio_button_tag :rating, "1"
-          = label_tag "1"
+.container
+  .row
+    .col-md-4
+    .col-md-4
+      = form_for @character, url: characters_url, method: :post, html: { id: "character_id" } do |f|
+        .col-md-4
+        .input-group
+          span class="input-group-addon"
+            = radio_button_tag :rating, "1"
+            = label_tag "1"
 
-          = radio_button_tag :rating, "2"
-          = label_tag "2"
+            = radio_button_tag :rating, "2"
+            = label_tag "2"
 
-          = radio_button_tag :rating, "3"
-          = label_tag "3"
+            = radio_button_tag :rating, "3"
+            = label_tag "3"
 
-          = radio_button_tag :rating, "4"
-          = label_tag "4"
+            = radio_button_tag :rating, "4"
+            = label_tag "4"
 
-          = radio_button_tag :rating, "5"
-          = label_tag "5"
+            = radio_button_tag :rating, "5"
+            = label_tag "5"
 
-        input name="character_id" type="hidden" value="#{@character._id}"
+          input name="character_id" type="hidden" value="#{@character._id}"
 
-          = f.submit "Rate", class: "btn btn-success"
+            = f.submit "Rate", class: "btn btn-success"
