@@ -7,8 +7,11 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'slim'
 gem 'bson_ext'
-gem 'mongoid', github: 'mongoid/mongoid'
+gem 'mongoid'
 gem 'bcrypt'
+gem 'sass'
+gem 'bootstrap-sass', '3.2.0.0'
+gem 'rake', '10.1.1'
 
 group :development, :test do
   # gem "better_errors"
